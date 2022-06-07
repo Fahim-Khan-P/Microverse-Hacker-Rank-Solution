@@ -1,0 +1,15 @@
+function countingValleys(steps, path) {
+    var altitude = 0;
+    var numberOfValleys = 0;
+    path.split('').forEach(step => {
+        if(step === 'U'){
+            altitude ++;
+            if(altitude === 0){
+                numberOfValleys++;
+            }
+        }else{
+            altitude--
+        }
+    })
+    return numberOfValleys;
+}

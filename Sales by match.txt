@@ -1,0 +1,18 @@
+function sockMerchant(n, ar) {
+  //Need to initiate a count variable to count pairs and return the value
+  let count = 0
+  //sort the given array
+  ar = ar.sort()
+  //loop through the sorted array 
+  for (let i=0; i < n-1; i++) {
+    //if the current item equals to the next item 
+    if(ar[i] === ar[i+1]){
+      //then that's a pair, increment our count variable
+      count++
+      //also increment i to skip the next item
+      i+=1
+    }
+  }
+  //return the count value
+  return count
+}
